@@ -43,4 +43,7 @@ knife4j:
         api-rule-resources:
           - com.loser.cartservice.controller
 
+feign:
+  okhttp:
+    enabled: true  # 表示开启连接池功能
 # keytool -genkeypair -alias hmall -keyalg RSA -keypass hmall123 -keystore hmall.jks -storepass hmall123

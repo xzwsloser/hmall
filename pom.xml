@@ -11,6 +11,7 @@
     <modules>
         <module>hm-common</module>
         <module>hm-service</module>
+        <module>hm-api</module>
     </modules>
 
     <parent>

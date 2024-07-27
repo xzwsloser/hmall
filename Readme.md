@@ -7,4 +7,5 @@
 [mcrio-service.md](docs%2Fmcrio-service.md)
 ## 微服务拆分
 [mcrio-service-broken.md](docs%2Fmcrio-service-broken.md)
-## 
+## OpenFeign使用
+[OpenFeign_learn.md](docs%2FOpenFeign_learn.md)
