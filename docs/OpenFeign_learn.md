@@ -58,7 +58,7 @@ feign:
 - 注意这里创建的工具模块可以不是被 Spring 管理的,只用完成他自己的功能(实例化 FeignClient 对象就可以了)
 ```java
 @SpringBootApplication
-@EnableFeignClients(basePackages = "com.hmall.api.client")  // 表示开启  OpenFeign,并且指定扫描包的位置
+@EnableFeignClients(basePackages = "com.hmall.api.client"); // 表示开启  OpenFeign,并且指定扫描包的位置
 ```
 ## OpenFeign日志输出
 - OpenFeign只会在FeignClient所在的包的日志级别为DEBUG的时候,才会输出日志,而且日志级别有4级:

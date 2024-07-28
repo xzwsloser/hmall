@@ -41,6 +41,6 @@ knife4j:
         group-name: default
         api-rule: package
         api-rule-resources:
-          - com.hmall.itemservice.controller
+          - com.loser.itemservice.controller
 
 # keytool -genkeypair -alias hmall -keyalg RSA -keypass hmall123 -keystore hmall.jks -storepass hmall123

@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8087
 spring:
   application:
     name: cart-service    # 表示给一个微服务起一个名称
@@ -12,7 +12,7 @@ spring:
     password: ${hm.db.pw}
   cloud:
     nacos:
-      server-addr: 192.168.59.132
+      server-addr: 192.168.59.132:8848
 mybatis-plus:
   configuration:
     default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler  # 枚举值确认
