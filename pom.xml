@@ -15,6 +15,7 @@
         <module>user-service</module>
         <module>trade-service</module>
         <module>pay-service</module>
+        <module>getaway</module>
     </modules>
 
     <parent>

@@ -9,6 +9,7 @@ import com.hmall.common.exception.BizIllegalException;
 import com.hmall.common.utils.BeanUtils;
 import com.hmall.common.utils.CollUtils;
 import com.hmall.common.utils.UserContext;
+import com.loser.cartservice.config.CartProperties;
 import com.loser.cartservice.domain.dto.CartFormDTO;
 import com.loser.cartservice.domain.po.Cart;
 import com.loser.cartservice.domain.vo.CartVO;
@@ -46,6 +47,8 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     private final DiscoveryClient discoveryClient; // 用于拉取服务
 
     private final ItemClient itemClient;
+
+    private final CartProperties cartProperties;
     @Override
     public void addItem2Cart(CartFormDTO cartFormDTO) {
         // 1.获取登录用户
@@ -72,7 +75,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     @Override
     public List<CartVO> queryMyCarts() {
         // 1.查询我的购物车列表
-      List<Cart> carts = lambdaQuery().eq(Cart::getUserId, 1L /* TODO UserContext.getUser() */).list();
+      List<Cart> carts = lambdaQuery().eq(Cart::getUserId,  UserContext.getUser() ).list();
         if (CollUtils.isEmpty(carts)) {
             return CollUtils.emptyList();
         }
@@ -141,7 +144,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
 
     private void checkCartsFull(Long userId) {
         Long count = lambdaQuery().eq(Cart::getUserId, userId).count();
-        if (count >= 10) {
+        if (count >= cartProperties.getMaxItems()) {  // 表示最大值
             throw new BizIllegalException(StrUtil.format("用户购物车课程不能超过{}", 10));
         }
     }

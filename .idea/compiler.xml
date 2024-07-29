@@ -15,6 +15,7 @@
         <module name="user-service" />
         <module name="hm-service" />
         <module name="hm-api" />
+        <module name="getaway" />
       </profile>
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
@@ -33,6 +34,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cart-service" options="-parameters" />
+      <module name="getaway" options="-parameters" />
       <module name="hm-api" options="-parameters" />
       <module name="hm-common" options="-parameters" />
       <module name="hm-service" options="-parameters" />
