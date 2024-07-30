@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: trade-service    # 表示给一个微服务起一个名称
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: 192.168.59.132:8848
+      config:
+        file-extension: yaml
+        shared-configs:
+          - data-id: shared-jd.yaml
+          - data-id: shared-log.yaml
+          - data-id: shared-swagger.yaml
+          - data-id: shared-seata.yaml
+# keytool -genkeypair -alias hmall -keyalg RSA -keypass hmall123 -keystore hmall.jks -storepass hmall123

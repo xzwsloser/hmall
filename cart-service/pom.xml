@@ -62,7 +62,7 @@
             <artifactId>hm-new-api</artifactId>
             <version>1.0.0</version>
         </dependency>
-        <!--nacos配置管理-->
+        <!--统一配置管理-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
@@ -71,6 +71,11 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+        <!--seata-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
         </dependency>
         <!-- sentinel     -->
         <dependency>
