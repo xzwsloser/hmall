@@ -16,6 +16,7 @@
         <module>trade-service</module>
         <module>pay-service</module>
         <module>getaway</module>
+        <module>hm-new-api</module>
     </modules>
 
     <parent>

@@ -8,13 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cart-service" />
+        <module name="hm-new-api" />
         <module name="pay-service" />
         <module name="trade-service" />
         <module name="hm-common" />
         <module name="item-service" />
         <module name="user-service" />
         <module name="hm-service" />
-        <module name="hm-api" />
         <module name="getaway" />
       </profile>
       <profile name="Gradle Imported" enabled="true">
@@ -25,6 +25,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="hm-api" target="11" />
+      <module name="hm-service" target="11" />
       <module name="user" target="17" />
       <module name="user.main" target="17" />
       <module name="user.test" target="17" />
@@ -37,6 +39,7 @@
       <module name="getaway" options="-parameters" />
       <module name="hm-api" options="-parameters" />
       <module name="hm-common" options="-parameters" />
+      <module name="hm-new-api" options="-parameters" />
       <module name="hm-service" options="-parameters" />
       <module name="item-service" options="-parameters" />
       <module name="pay-service" options="-parameters" />

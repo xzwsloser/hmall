@@ -22,7 +22,7 @@
 
         <dependency>
             <groupId>com.loser</groupId>
-            <artifactId>hm-api</artifactId>
+            <artifactId>hm-new-api</artifactId>
             <version>1.0.0</version>
         </dependency>
         <!--web-->

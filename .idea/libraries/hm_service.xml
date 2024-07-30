@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hm-service">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/hm-service/target/hm-service.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

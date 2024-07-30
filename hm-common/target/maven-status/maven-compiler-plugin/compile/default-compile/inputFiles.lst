@@ -1,10 +1,12 @@
 D:\SpringCloud project\heima-mall\back-end\src\hmall\hm-common\src\main\java\com\hmall\common\utils\UserContext.java
 D:\SpringCloud project\heima-mall\back-end\src\hmall\hm-common\src\main\java\com\hmall\common\config\JsonConfig.java
+D:\SpringCloud project\heima-mall\back-end\src\hmall\hm-common\src\main\java\com\hmall\common\config\MvcConfig.java
 D:\SpringCloud project\heima-mall\back-end\src\hmall\hm-common\src\main\java\com\hmall\common\utils\Convert.java
 D:\SpringCloud project\heima-mall\back-end\src\hmall\hm-common\src\main\java\com\hmall\common\utils\WebUtils.java
 D:\SpringCloud project\heima-mall\back-end\src\hmall\hm-common\src\main\java\com\hmall\common\exception\BadRequestException.java
 D:\SpringCloud project\heima-mall\back-end\src\hmall\hm-common\src\main\java\com\hmall\common\config\MyBatisConfig.java
 D:\SpringCloud project\heima-mall\back-end\src\hmall\hm-common\src\main\java\com\hmall\common\utils\CollUtils.java
+D:\SpringCloud project\heima-mall\back-end\src\hmall\hm-common\src\main\java\com\hmall\common\interceptor\UserInterceptor.java
 D:\SpringCloud project\heima-mall\back-end\src\hmall\hm-common\src\main\java\com\hmall\common\domain\R.java
 D:\SpringCloud project\heima-mall\back-end\src\hmall\hm-common\src\main\java\com\hmall\common\domain\PageDTO.java
 D:\SpringCloud project\heima-mall\back-end\src\hmall\hm-common\src\main\java\com\hmall\common\exception\CommonException.java

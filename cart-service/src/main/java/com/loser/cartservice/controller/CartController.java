@@ -1,5 +1,6 @@
 package com.loser.cartservice.controller;
 
+import cn.hutool.core.thread.ThreadUtil;
 import com.loser.cartservice.domain.dto.CartFormDTO;
 import com.loser.cartservice.domain.po.Cart;
 import com.loser.cartservice.domain.vo.CartVO;
@@ -45,6 +46,7 @@ public class CartController {
     @ApiOperation("查询购物车列表")
     @GetMapping
     public List<CartVO> queryMyCarts(){
+        ThreadUtil.sleep(500L);   // 表示阻塞服务
         return cartService.queryMyCarts();
     }
     @ApiOperation("批量删除购物车中商品")

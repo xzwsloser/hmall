@@ -29,28 +29,7 @@ spring:
   cloud:
     nacos:
       server-addr: 192.168.59.132:8848
-    gateway:
-      routes:
-        - id: item-service
-          uri: lb://item-service
-          predicates:
-            - Path=/items/**,/search/**   # 表示路由配置
-        - id: user-service
-          uri: lb://user-service
-          predicates:
-            - Path=/addresses/**,/users/**
-        - id: cart-service
-          uri: lb://cart-service
-          predicates:
-            - Path=/carts/**
-        - id: trade-service
-          uri: lb://trade-service
-          predicates:
-            - Path=/orders/**
-        - id: pay-service
-          uri: lb://pay-service
-          predicates:
-            - Path=/pay-orders/**
+    
 ```
 ## 路由配置
 - 网关路由对应的java了类型就是 RouteDefinition,常见的属性如下:
@@ -339,4 +318,5 @@ public class DynamicRouteLoader {
 }
 ```
  - 最后把路由写入到nacos的注册中心中,注意dataId一定需要和程序中一致
+
           

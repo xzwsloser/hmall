@@ -1,5 +1,10 @@
 server:
   port: 8087
+  tomcat:
+    threads:
+      max: 25 # 表示最大线程数量为 25
+    accept-count: 25 # 表示最大的等待线程数量
+    max-connections: 100  # 表示连接池中的数量
 feign:
   okhttp:
     enabled: true  # 表示开启连接池功能,这是每一个微服务中的配置信息
@@ -9,5 +14,10 @@ hm:
   swagger:
     title: "黑马商城购物车服务接口文档"
     package: com.hmall.cart.controller
-
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090   # 表示 sentinel 的配置信息
+      http-method-specify: true # 表示设置请求路径不同
 # keytool -genkeypair -alias hmall -keyalg RSA -keypass hmall123 -keystore hmall.jks -storepass hmall123

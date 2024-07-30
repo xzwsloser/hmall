@@ -37,6 +37,7 @@ public class DynamicRouteLoader {
     private final String dataId = "gateway-routers.json";  // 使用 json 格式进行解析
 
     private final String group = "DEFAULT_GROUP";
+
     @PostConstruct  // 表示这一个类实例话之后执行
     public void initRouteConfigLoader() throws NacosException {
         // 1. 项目启动时,先拉取配置,之后添加配置监听器
@@ -55,7 +56,7 @@ public class DynamicRouteLoader {
         });
     }
 
-    public void updateConfig(String configInfo){
+    public void updateConfig(String configInfo) {
         log.debug("开始更新路由信息");
         // 表示更新配置
         // 1. 解析配置文件,转化为 RouteDefination
@@ -68,9 +69,9 @@ public class DynamicRouteLoader {
         // 清空路由表
         router.clear();
         for (RouteDefinition routeDefinition : routeDefinitions) {
-                routeDefinitionWriter.save(Mono.just(routeDefinition)).subscribe();  // 表示订阅容器中的消息
-                // 记录路由 id
-                router.add(routeDefinition.getId());
+            routeDefinitionWriter.save(Mono.just(routeDefinition)).subscribe();  // 表示订阅容器中的消息
+            // 记录路由 id
+            router.add(routeDefinition.getId());
         }
     }
 }
